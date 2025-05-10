@@ -1,0 +1,156 @@
+/*styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #fff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #0077b6;
+  font-size: 32px;
+}
+
+header .subtitle {
+  color: #555;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* Form styles */
+.form-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0077b6;
+}
+
+/* Button */
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #0077b6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn2 {
+  display: block;
+  width: max-content;
+  justify-self: center;
+  margin-top: 20px;
+  background-color: #0077b6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005f87;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Success and failure result text */
+.result.success {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.result.failure {
+  color: #c62828;
+  background-color: #ffebee;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}

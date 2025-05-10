@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breast Cancer Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Project Title -->
+      <header>
+        <h1>Breast Cancer Prediction</h1>
+        <p class="subtitle">Early Detection Using Machine Learning</p>
+      </header>
+
+      <!-- Form Card -->
+      <div class="form-container">
+        <h2>Enter Diagnostic Features</h2>
+        <form action="/predict" method="POST">
+          <!-- Patient Name Field (placed outside loop) -->
+          <div class="form-group">
+            <label for="patient_name">Patient Name:</label>
+            <input
+              type="text"
+              id="patient_name"
+              name="patient_name"
+              placeholder="Enter patient's name"
+              required
+            />
+          </div>
+
+          <!-- Loop through the features and generate input fields -->
+          {% for feature in features %}
+          <div class="form-group">
+            <label for="{{ feature }}">
+              {{ feature.replace('_', ' ').title() }}
+              <!-- Formatting feature name -->
+            </label>
+            <input
+              type="number"
+              id="{{ feature }}"
+              name="{{ feature }}"
+              step="any"
+              placeholder="Enter {{ feature.replace('_', ' ').title() }}"
+              required
+            />
+          </div>
+          {% endfor %}
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn">Predict</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
